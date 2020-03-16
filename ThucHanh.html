@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuc Hanh Lam Tu Dien</title>
+</head>
+<body>
+<input type="text" name="input" id="input">
+<button type="button" onclick="translate()">Translate</button><br/>
+<div id="result"></div>
+<script>
+    function translate() {
+        let array1 = ["love", "result", "display", "sing", "song"];
+        let array2 = ["Yêu", "Kết Quả", "Hiển thị", "Hát", "Bài Hát"];
+        let input = document.getElementById("input");
+        let index = -1;
+        for (let i = 0; i < array1.length; i++) {
+            if (array1[i] === input) {
+                index = i;
+                break;
+            }
+        }
+        if (index !== -1) {
+            document.getElementById("result").innerHTML = array2[index];
+        } else {
+            document.getElementById("result").innerHTML = "Khong search duoc!";
+        }
+    }
+</script>
+</body>
+</html>
