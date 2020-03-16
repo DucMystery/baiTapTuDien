@@ -5,17 +5,17 @@
     <title>Thuc Hanh Lam Tu Dien</title>
 </head>
 <body>
-<input type="text" name="input" id="input">
+<input type="text" name="input" id="nhapVao">
 <button type="button" onclick="translate()">Translate</button><br/>
 <div id="result"></div>
 <script>
     function translate() {
         let array1 = ["love", "result", "display", "sing", "song"];
         let array2 = ["Yêu", "Kết Quả", "Hiển thị", "Hát", "Bài Hát"];
-        let input = document.getElementById("input");
+        let strInput = document.getElementById("nhapVao").value;
         let index = -1;
         for (let i = 0; i < array1.length; i++) {
-            if (array1[i] === input) {
+            if (array1[i] === strInput) {
                 index = i;
                 break;
             }
